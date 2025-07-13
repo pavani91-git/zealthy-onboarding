@@ -5,7 +5,7 @@ const DataPage = () => {
     const [users, setUsers] = useState([]);
 
     useEffect(() => {
-        axios.get('https://zealthy-backend.onrender.com/api/data')
+        axios.get('https://zealthy-backend-6t10.onrender.com/api/data')
             .then((res) => {
                 setUsers(res.data);
             })
