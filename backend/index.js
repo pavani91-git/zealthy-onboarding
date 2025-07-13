@@ -10,7 +10,16 @@ import pool from './db.js'; // PostgreSQL connection
 const app = express();
 const PORT = 3000;
 
-
+app.get('/api/grant', async (req, res) => {
+    try {
+        await pool.query(`GRANT ALL PRIVILEGES ON SCHEMA public TO pavani`);
+        await pool.query(`GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO pavani`);
+        res.send('✅ Permissions granted');
+    } catch (err) {
+        console.error('❌ Error granting privileges:', err);
+        res.status(500).send('Failed to grant privileges');
+    }
+});
 app.use(cors({
     origin: 'https://zealthy-onboarding-jlkv.onrender.com',
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
