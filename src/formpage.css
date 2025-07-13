@@ -1,0 +1,149 @@
+/* Reset and base styles */
+html, body, #root {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to bottom right, #e0f2fe, #c7d2fe);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Page wrapper */
+.page-container {
+    width: 100%;
+    max-width: 1000px;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styles */
+.header {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #0f172a;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 0.5rem 0 1.5rem 0;
+}
+
+.nav-links a {
+    color: #4f46e5;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Wizard heading */
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 1rem;
+}
+
+/* Step counter */
+.step-indicator {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #334155;
+}
+
+/* Form card */
+.form-card {
+    width: 100%;
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+/* Form container inside form-card */
+.form-container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Section title */
+.form-container h2 {
+    text-align: center;
+    color: #1e3a8a;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+/* Label + input styles */
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #374151;
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    background-color: #f9fafb;
+}
+
+/* Buttons */
+button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    margin-right: 0.75rem;
+    transition: background-color 0.3s ease;
+}
+
+/* Primary next button */
+.next-button {
+    background-color: #3b82f6;
+    color: black; /* Your request */
+}
+
+.next-button:hover {
+    background-color: #2563eb;
+}
+
+/* Back button */
+.back-button {
+    background-color: #6b7280;
+    color: white;
+}
+
+.back-button:hover {
+    background-color: #4b5563;
+}
+
+/* Submit button */
+button[type="submit"] {
+    background-color: #10b981;
+    color: white;
+}
+
+button[type="submit"]:hover {
+    background-color: #059669;
+}
