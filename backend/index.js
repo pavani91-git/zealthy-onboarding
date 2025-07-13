@@ -5,10 +5,15 @@ import pool from './db.js'; // PostgreSQL connection
 
 
 
+// Allow CORS from your frontend domain
+
 const app = express();
 const PORT = 3000;
 
-app.use(cors());
+
+app.use(cors({
+    origin: 'https://zealthy-onboarding-jlkv.onrender.com'
+}));
 app.use(express.json());
 
 // POST /api/users – save user form data
