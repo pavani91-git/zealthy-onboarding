@@ -30,7 +30,7 @@ const Admin = () => {
         }
 
         try {
-            const res = await axios.post('http://localhost:3000/api/config', configArray);
+            const res = await axios.post('https://zealthy-backend-6t10.onrender.com/api/config', configArray);
             if (res.status === 200 || res.status === 201) {
                 alert('✅ Config saved!');
             }

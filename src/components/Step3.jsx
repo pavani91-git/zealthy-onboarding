@@ -14,7 +14,8 @@ export default function Step3({ formData, setFormData, prev, goToStep1 }) {
         useEffect(() => {
             (async () => {
                 try {
-                    const res = await axios.get('http://localhost:3000/api/config');
+                    const res =  await axios.get('https://zealthy-backend-6t10.onrender.com/api/config');
+
                     const step3Fields = res.data.filter(item => item.page === 3);
                     setConfig(step3Fields);
                 } catch (err) {
@@ -26,7 +27,7 @@ export default function Step3({ formData, setFormData, prev, goToStep1 }) {
         const handleSubmit = async (e) => {
             e.preventDefault();
             try {
-                const response = await axios.post('http://localhost:3000/api/users', formData);
+                const response = await axios.post('https://zealthy-backend-6t10.onrender.com/api/users', formData);
                 if (response.status === 200 || response.status === 201) {
                     alert('🎉 User submitted successfully!');
                     goToStep1(); // ✅ Redirect to Step1 ("/" path)

@@ -11,7 +11,8 @@ export default function Step2({ formData, setFormData, next, prev }) {
     useEffect(() => {
         (async () => {
             try {
-                const res = await axios.get('http://localhost:3000/api/config');
+                const res = await axios.get('https://zealthy-backend-6t10.onrender.com/api/config');
+
                 const step2Fields = res.data.filter(item => item.page === 2);
                 setConfig(step2Fields);
             } catch (err) {
