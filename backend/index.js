@@ -12,8 +12,11 @@ const PORT = 3000;
 
 
 app.use(cors({
-    origin: 'https://zealthy-onboarding-jlkv.onrender.com'
+    origin: 'https://zealthy-onboarding-jlkv.onrender.com',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    credentials: true
 }));
+
 app.use(express.json());
 
 // POST /api/users – save user form data
