@@ -1,12 +1,14 @@
+import dotenv from 'dotenv';
+dotenv.config();
+
 import pkg from 'pg';
 const { Pool } = pkg;
 
+
 const pool = new Pool({
-    user: 'postgres',         // default user
-    host: 'localhost',
-    database: 'Zealthy',      // your DB name (match casing!)
-    password: '1234',         // ✅ your password
-    port: 5432
+    // eslint-disable-next-line no-undef
+    connectionString: process.env.DATABASE_URL,
+    ssl: { rejectUnauthorized: false }
 });
 
 export default pool;
