@@ -95,6 +95,11 @@ h1 {
     color: #374151;
     font-weight: 500;
 }
+.form-group textarea {
+    color: black !important;
+    background-color: white;
+    caret-color: black;
+}
 
 .form-group input {
     width: 100%;
