@@ -95,19 +95,16 @@ h1 {
     color: #374151;
     font-weight: 500;
 }
-.form-group textarea {
-    color: black !important;
-    background-color: white;
-    caret-color: black;
-}
 
-.form-group input {
+.form-group input,
+.form-group textarea {
     width: 100%;
-    padding: 0.75rem;
-    font-size: 1rem;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
     border: 1px solid #d1d5db;
-    border-radius: 0.5rem;
-    background-color: #f9fafb;
+    background-color: #ffffff;       /* ensure white background */
+    color: #000000;                  /* ensure black text */
 }
 
 /* Buttons */
